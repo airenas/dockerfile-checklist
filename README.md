@@ -11,15 +11,15 @@ The file contains a simple checklist for manually checking a Dockerfile for secu
     - [ ] code - no source code for compiler languages, just a binary
     - [ ] or for interpreted languages - just needed scripts
     - [ ] check with snyk for vulnerabilities
-
+    - [ ] check downloaded SW with curl or wget using checksums
 ## Reproducibility
 - [ ] has an exact version of the base image
 - [ ] compiles binary inside docker, uses two-step docker file 
-- [ ] takes the version of the service as a `docker` parameter and add compiles into binary
+- [ ] takes the version of the service as a `docker` parameter and add/compiles into binary
 
 ## Other
 
-- [ ] has `EXPOSE` command listed if the service need some ports
+- [ ] has `EXPOSE` command listed if the service needs some ports
 - [ ] the service responds to terminate command
 - [ ] the main process rips zombies
 - [ ] `apt-get install` commands alphabetically sorted
