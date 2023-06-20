@@ -13,17 +13,17 @@ The file contains a simple checklist for manually checking a Dockerfile for secu
     - [ ] check with snyk for vulnerabilities
     - [ ] check downloaded SW with curl or wget using checksums
 ## Reproducibility
-- [ ] has an exact version of the base image
+- [ ] has an exact version of the base image set
 - [ ] compiles binary inside docker, uses two-step docker file 
 - [ ] takes the version of the service as a `docker` parameter and add/compiles into binary
 
 ## Other
 
-- [ ] has `EXPOSE` command listed if the service needs some ports
+- [ ] has the `EXPOSE` command listed if the service needs some ports
 - [ ] the service responds to terminate command
 - [ ] the main process rips zombies
 - [ ] `apt-get install` commands alphabetically sorted
 - [ ] Always combine RUN apt-get update with apt-get install in the same RUN statement.
 - [ ] if using pipes in commands - `set -o pipefail &&`: `RUN set -o pipefail && wget -O - https://some.site | wc -l > /number`
-- [ ] main command with `ENTRYPOINT` and parameters as `CMD` 
-- [ ] has `VOLUME` for database like services that persists data
+- [ ] the main command with `ENTRYPOINT` and parameters as `CMD` 
+- [ ] has `VOLUME` for database-like services that persist data
